@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Md Athar Ali Ansari — Flutter Developer</title>
+    <style>
+      @page {
+        size: Letter;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        color: #161513;
+        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        width: 8.5in;
+        min-height: 11in;
+        padding: 0.48in 0.55in 0.42in;
+        position: relative;
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 8px;
+        background: #16363f;
+      }
+
+      .page::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 8px;
+        height: 72px;
+        background: #c4a36a;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #d8d2c6;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+      }
+
+      .title {
+        margin: 6px 0 0;
+        font-size: 12px;
+        font-weight: 650;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #16363f;
+      }
+
+      .contact {
+        margin: 0;
+        text-align: right;
+        font-size: 10px;
+        line-height: 1.55;
+        color: #4d4a45;
+      }
+
+      .contact a {
+        color: #16363f;
+        text-decoration: none;
+      }
+
+      h2 {
+        margin: 16px 0 7px;
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #16363f;
+      }
+
+      .summary {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.5;
+        color: #2b2926;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: 118px 1fr;
+        gap: 3px 12px;
+        font-size: 10.5px;
+        line-height: 1.45;
+      }
+
+      .skills dt {
+        margin: 0;
+        color: #6a665e;
+        font-weight: 600;
+      }
+
+      .skills dd {
+        margin: 0;
+        color: #1f1d1a;
+      }
+
+      .job {
+        margin-bottom: 11px;
+      }
+
+      .job-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: baseline;
+      }
+
+      .job-head h3 {
+        margin: 0;
+        font-size: 12.5px;
+        font-weight: 700;
+      }
+
+      .when {
+        font-size: 10px;
+        color: #6a665e;
+        white-space: nowrap;
+      }
+
+      .org {
+        margin: 2px 0 5px;
+        font-size: 11px;
+        color: #16363f;
+        font-weight: 600;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0 0 0 14px;
+      }
+
+      li {
+        margin: 0 0 3px;
+        font-size: 10.5px;
+        line-height: 1.42;
+        color: #2b2926;
+      }
+
+      .projects {
+        display: grid;
+        gap: 5px;
+      }
+
+      .project {
+        display: grid;
+        grid-template-columns: 128px 1fr auto;
+        gap: 10px;
+        align-items: baseline;
+        font-size: 10.5px;
+      }
+
+      .project strong {
+        font-size: 11px;
+      }
+
+      .project span {
+        color: #3d3a35;
+      }
+
+      .project a {
+        color: #16363f;
+        text-decoration: none;
+        font-size: 9.5px;
+      }
+
+      .edu {
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+      }
+
+      .edu strong {
+        font-weight: 700;
+      }
+
+      .muted {
+        color: #6a665e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div>
+          <h1>Md Athar Ali Ansari</h1>
+          <p class="title">Flutter Developer</p>
+        </div>
+        <p class="contact">
+          Bangalore, India · +91 92345 78836<br />
+          <a href="mailto:mdatharaliansari786@gmail.com">mdatharaliansari786@gmail.com</a><br />
+          <a href="https://github.com/therealtech99">github.com/therealtech99</a><br />
+          <a href="https://www.linkedin.com/in/md-athar-ali-ansari-544a201a2">linkedin.com/in/md-athar-ali-ansari-544a201a2</a>
+        </p>
+      </header>
+
+      <h2>Summary</h2>
+      <p class="summary">
+        Flutter developer with 4+ years architecting and shipping production mobile applications in Dart.
+        Founder of VillageMart, a live 3-app Flutter/Firebase grocery platform on Google Play. I own
+        architecture, interface implementation, API integration, payments, and post-launch stability —
+        and I ship independently when the work is hard. Also deliver Next.js products when a project
+        needs a web surface.
+      </p>
+
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Flutter / Mobile</dt>
+        <dd>Flutter, Dart</dd>
+        <dt>Architecture &amp; APIs</dt>
+        <dd>REST APIs, Firebase, Authentication, API integration</dd>
+        <dt>Quality &amp; delivery</dt>
+        <dd>Git, GitHub, Testing, Debugging, Deployment</dd>
+        <dt>Payments &amp; cloud</dt>
+        <dd>UPI, Cashfree, Google Cloud Platform</dd>
+        <dt>Also ships web</dt>
+        <dd>React.js, Next.js, JavaScript, TypeScript, HTML5, CSS3</dd>
+      </dl>
+
+      <h2>Experience</h2>
+      <section class="job">
+        <div class="job-head">
+          <h3>Founder &amp; Lead Product Engineer</h3>
+          <p class="when">Nov 2021 – Present</p>
+        </div>
+        <p class="org">VillageMart · Bangalore, India</p>
+        <ul>
+          <li>Architected, developed, and maintain a Customer, Admin, and Delivery application suite in Flutter and Dart on a shared Firebase backend, from conception through Google Play.</li>
+          <li>Translated product UX into production Flutter interfaces across three apps; the customer app has 1,000+ Play installs and 150+ successful deliveries.</li>
+          <li>Designed an offline-first ordering path for low-connectivity zones, using atomic Firebase transactions to prevent overselling.</li>
+          <li>Integrated Firebase services, REST-style data flows, and dynamic QR UPI payments with privacy number masking.</li>
+          <li>Own troubleshooting, stability, inventory, billing, last-mile logistics, and FSSAI food-tech compliance after launch.</li>
+        </ul>
+      </section>
+
+      <section class="job">
+        <div class="job-head">
+          <h3>Freelance Full-Stack Developer</h3>
+          <p class="when">2022 – Present</p>
+        </div>
+        <p class="org">Independent / Client Projects</p>
+        <ul>
+          <li>Havocline Ventures — Next.js marketing and lead-generation site with service pages and WhatsApp lead capture.</li>
+          <li>Ujala Electric — Next.js catalog with product listings, category filtering, and dealership onboarding.</li>
+          <li>Resume4u.in — Next.js resume builder with templates, import/parsing, client-side drafts, and Cashfree UPI checkout.</li>
+          <li>Owned the full lifecycle independently: requirements, design, development, deployment, and client support.</li>
+        </ul>
+      </section>
+
+      <h2>Selected work</h2>
+      <div class="projects">
+        <div class="project">
+          <strong>VillageMart</strong>
+          <span>Flutter · Dart · Firebase · 3-app grocery platform</span>
+          <a href="https://villagemartapp.in">villagemartapp.in</a>
+        </div>
+        <div class="project">
+          <strong>Resume4u.in</strong>
+          <span>Next.js resume builder with Cashfree UPI</span>
+          <a href="https://resume4u.in/">resume4u.in</a>
+        </div>
+        <div class="project">
+          <strong>Ujala Electric</strong>
+          <span>Next.js catalog and dealer onboarding</span>
+          <a href="https://www.ujalaelectric.com/">ujalaelectric.com</a>
+        </div>
+        <div class="project">
+          <strong>Havocline Ventures</strong>
+          <span>Next.js marketing site, WhatsApp leads</span>
+          <a href="https://www.havoclinesolutions.com/">havoclinesolutions.com</a>
+        </div>
+      </div>
+
+      <h2>Education</h2>
+      <p class="edu">
+        <span><strong>Bachelor of Commerce (B.Com)</strong> · Bangalore University</span>
+        <span class="muted">2021</span>
+      </p>
+    </div>
+  </body>
+</html>

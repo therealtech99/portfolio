@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Md Athar Ali Ansari — Portfolio
 
-## Getting Started
+Personal site and hosted resume. Flutter-first, with live product links.
 
-First, run the development server:
+**Stack:** Next.js, React, TypeScript, Three.js, Tailwind CSS
+
+## Live products featured here
+
+- [VillageMart](https://play.google.com/store/apps/details?id=com.villagemart.app) — Flutter / Dart / Firebase (Google Play)
+- [Resume4u.in](https://resume4u.in/)
+- [Ujala Electric](https://www.ujalaelectric.com/)
+- [Havocline Ventures](https://www.havoclinesolutions.com/)
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Resume PDF
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Hosted at `/resume.pdf`. Regenerate the designed PDF with:
 
-## Learn More
+```bash
+npm run generate-resume
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [mdatharaliansari786@gmail.com](mailto:mdatharaliansari786@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/md-athar-ali-ansari-544a201a2)
+- [GitHub](https://github.com/therealtech99)
