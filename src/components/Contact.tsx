@@ -1,7 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { GitHubIcon, LinkedInIcon, MailIcon, PhoneIcon } from "@/components/Icons";
+import { MailIcon, PhoneIcon } from "@/components/Icons";
+import { ProfileLinks } from "@/components/ProfileLinks";
 import { SectionHeader } from "@/components/SectionHeader";
 import { site } from "@/lib/site";
 
@@ -74,31 +75,8 @@ export function Contact() {
                 </a>
               </li>
             ) : null}
-            <li>
-              <a
-                href={site.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-12 items-center gap-3 rounded-full border border-line bg-bg-elevated px-4 text-sm text-ink transition-colors hover:border-ink"
-              >
-                <LinkedInIcon className="h-4 w-4" />
-                LinkedIn
-              </a>
-            </li>
-            {site.github ? (
-              <li>
-                <a
-                  href={site.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex h-12 items-center gap-3 rounded-full border border-line bg-bg-elevated px-4 text-sm text-ink transition-colors hover:border-ink"
-                >
-                  <GitHubIcon className="h-4 w-4" />
-                  GitHub
-                </a>
-              </li>
-            ) : null}
           </ul>
+          <ProfileLinks tone="light" className="mt-4" />
         </div>
 
         <form

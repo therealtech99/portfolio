@@ -1,7 +1,10 @@
-import { site } from "@/lib/site";
+import { profileLinks, site } from "@/lib/site";
 
 export function JsonLd() {
-  const sameAs = [site.linkedin, site.github].filter(Boolean);
+  const sameAs = profileLinks
+    .filter((link) => link.sameAs)
+    .map((link) => link.href)
+    .filter(Boolean);
 
   const data = {
     "@context": "https://schema.org",

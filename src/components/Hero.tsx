@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { GitHubIcon, LinkedInIcon } from "@/components/Icons";
+import { ProfileBadge } from "@/components/ProfileBadge";
 import { heroStack, site } from "@/lib/site";
 
 const HeroWebGL = dynamic(() => import("@/components/HeroWebGL"), {
@@ -26,6 +26,10 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-center px-5 py-28 sm:px-8">
+        <div className="hero-mask mb-8">
+          <ProfileBadge tone="dark" />
+        </div>
+
         <p className="hero-mask mb-7">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/5 px-3 py-1.5 text-xs tracking-[0.18em] text-white/60 uppercase">
             <span className="h-1.5 w-1.5 rounded-full bg-[#c4a36a]" />
@@ -78,33 +82,6 @@ export function Hero() {
             >
               Contact Me
             </a>
-          </span>
-        </div>
-
-        <div className="hero-mask mt-8 flex flex-wrap items-center gap-3">
-          <span className="delay-7 flex flex-wrap gap-3">
-            <a
-              href={site.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-11 items-center gap-2 rounded-full border border-white/12 bg-white/5 px-4 text-sm text-white/70 transition-colors hover:border-white/40 hover:text-white"
-              aria-label="LinkedIn profile"
-            >
-              <LinkedInIcon className="h-4 w-4" />
-              LinkedIn
-            </a>
-            {site.github ? (
-              <a
-                href={site.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-11 items-center gap-2 rounded-full border border-white/12 bg-white/5 px-4 text-sm text-white/70 transition-colors hover:border-white/40 hover:text-white"
-                aria-label="GitHub profile"
-              >
-                <GitHubIcon className="h-4 w-4" />
-                GitHub
-              </a>
-            ) : null}
           </span>
         </div>
       </div>

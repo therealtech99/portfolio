@@ -1,6 +1,7 @@
 import {
   education,
   experience,
+  profileLinks,
   skillGroups,
   site,
   technicalHighlights,
@@ -39,16 +40,13 @@ export function ResumeDocument() {
                   {site.phone}
                 </a>
               </li>
-              <li>
-                <a href={site.github} className="hover:text-ink">
-                  github.com/therealtech99
-                </a>
-              </li>
-              <li>
-                <a href={site.linkedin} className="hover:text-ink">
-                  LinkedIn
-                </a>
-              </li>
+              {profileLinks.map((link) => (
+                <li key={link.id}>
+                  <a href={link.href} className="hover:text-ink">
+                    {link.display ?? link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </section>
 

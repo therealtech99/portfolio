@@ -3,10 +3,9 @@
  *
  * Before deploying, update:
  * - email
- * - github (leave blank to hide GitHub links)
+ * - profileLinks (add LinkedIn, GitHub, portfolio, WhatsApp, etc.)
  * - NEXT_PUBLIC_SITE_URL in `.env.local` (or Vercel env vars)
  *
- * LinkedIn is set from the public profile associated with this name.
  * Do not add technologies, employers, dates, or URLs that are not confirmed.
  */
 
@@ -22,10 +21,67 @@ function resolveSiteUrl() {
   return "http://localhost:3000";
 }
 
+export type ProfileLinkIcon =
+  | "linkedin"
+  | "github"
+  | "mail"
+  | "phone"
+  | "globe"
+  | "link";
+
+export type ProfileLink = {
+  id: string;
+  label: string;
+  href: string;
+  /** Optional shorter text for the resume document */
+  display?: string;
+  icon?: ProfileLinkIcon;
+  /** Include in schema.org sameAs (public profile URLs) */
+  sameAs?: boolean;
+};
+
+/**
+ * Add or remove profile / social links here.
+ * They appear in the hero, contact, footer, and resume.
+ *
+ * Examples you can paste in:
+ * { id: "x", label: "X", href: "https://x.com/you", icon: "link", sameAs: true },
+ * { id: "whatsapp", label: "WhatsApp", href: "https://wa.me/919234578836", icon: "link" },
+ * { id: "portfolio", label: "Portfolio", href: "https://yoursite.com", icon: "globe", sameAs: true },
+ * { id: "email", label: "Email", href: "mailto:you@email.com", icon: "mail" },
+ */
+export const profileLinks: ProfileLink[] = [
+  {
+    id: "linkedin",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/md-athar-ali-ansari-544a201a2",
+    icon: "linkedin",
+    sameAs: true,
+  },
+  {
+    id: "github",
+    label: "GitHub",
+    href: "https://github.com/therealtech99",
+    display: "github.com/therealtech99",
+    icon: "github",
+    sameAs: true,
+  },
+];
+
+function linkById(id: string) {
+  return profileLinks.find((link) => link.id === id)?.href ?? "";
+}
+
 export const site = {
   name: "Md Athar Ali Ansari",
   shortName: "Md Athar",
   initials: "MA",
+  /**
+   * Optional headshot shown above profile links.
+   * Drop a file in `public/` and set the path here (e.g. "/profile.jpg").
+   * Leave empty to show initials instead.
+   */
+  photo: "/profile.jpg",
   title: "Flutter Developer",
   location: "Bangalore, India",
   years: "4+ years",
@@ -36,8 +92,9 @@ export const site = {
   supporting:
     "4+ years building Flutter and mobile products in production, including a live 3-app grocery platform on Google Play. I own architecture, API integration, and the hard problems after launch.",
   email: "mdatharaliansari786@gmail.com",
-  linkedin: "https://www.linkedin.com/in/md-athar-ali-ansari-544a201a2",
-  github: "https://github.com/therealtech99",
+  /** Convenience aliases — prefer editing `profileLinks` above */
+  linkedin: linkById("linkedin"),
+  github: linkById("github"),
   resumePath: "/resume.pdf",
   resumeFileName: "Md-Athar-Ali-Ansari-Resume.pdf",
   resumePage: "/resume",
